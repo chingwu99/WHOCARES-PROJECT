@@ -69,6 +69,48 @@ header {
           color: wheat;
         }
       }
+
+      li.service-nav {
+        position: relative;
+        //
+        nav.service-nav-open {
+          display: none;
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            z-index: 10;
+
+            li {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: white;
+              color: black;
+              border: 3px;
+              border-top: 1px;
+              border-style: solid;
+              border-color: wheat;
+              opacity: 0.95;
+              padding: 0.6rem 0.4rem;
+              width: 10vw;
+              height: 7vh;
+              cursor: pointer;
+            }
+
+            li:hover {
+              background-color: wheat;
+            }
+          }
+        }
+
+        nav.service-nav-mouseover {
+          display: block;
+        }
+      }
     }
   }
 
@@ -132,7 +174,8 @@ main {
     section.crads {
       display: flex;
       flex-wrap: wrap;
-      height: 60vh;
+      height: 62vh;
+      width: 80vw;
 
       div.card {
         display: flex;
@@ -157,6 +200,7 @@ main {
             width: 30vh;
             height: 30vh;
             transition: 0.25s ease;
+            cursor: pointer;
           }
 
           img:hover {
@@ -497,5 +541,15 @@ footer {
 
   to {
     transform: scaleX(1);
+  }
+}
+
+@keyframes slidedown {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
   }
 }

@@ -91,7 +91,6 @@ header {
               color: black;
               border: 4px solid wheat;
               border-top: 1px;
-              border-top: 1px;
 
               opacity: 0.95;
               padding: 0.6rem 0.4rem;
@@ -127,30 +126,124 @@ main {
   background-color: black;
 
   section.backImage {
-    min-height: 90vh;
+    min-height: 180vh;
     width: 95%;
-    background-color: #545454;
+    background-color: whitesmoke;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+
     align-items: center;
     border-radius: 1.5%;
     margin: 0.1rem;
 
     h1 {
       font-size: 6rem;
-      color: white;
+      color: #779198;
       transition: 0.25s ease;
+      margin-top: 1rem;
     }
 
-    h1:hover {
-      color: wheat;
+    section.rential-step {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem 0rem;
+      color: #779198;
+
+      i {
+        font-size: 2rem;
+      }
+
+      div {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div.rential-step-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px;
+        border-style: solid;
+        border-color: #779198;
+        border-radius: 50%;
+
+        i {
+          font-size: 2rem;
+          padding: 1.5rem;
+        }
+      }
     }
 
-    div {
-      img {
-        height: 60vh;
+    section.commodity {
+      i {
+        pointer-events: none;
+      }
+      div.commodity-floor {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2rem 0rem;
+        div.commodity-card {
+          border: 3px;
+          border-style: solid;
+          border-color: #779198;
+          border-radius: 2%;
+          height: 40vh;
+          margin: 0rem 1rem;
+          background-color: #d9d9d9;
+
+          div.commodity-img {
+            overflow: hidden;
+            img {
+              height: 25vh;
+              transition: 0.25s ease;
+            }
+
+            img:hover {
+              transform: scale(1.2);
+            }
+          }
+
+          div.commodity-word {
+            display: flex;
+
+            div {
+              flex: 1 1;
+              margin: 0.5rem;
+              h3 {
+                font-size: 1.1rem;
+              }
+            }
+
+            div.commodity-button-div {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+              button.commodity-button {
+                font-size: 1.5rem;
+                background-color: #779198;
+                color: whitesmoke;
+                width: 7vw;
+                height: 5vh;
+                border: 2px whitesmoke solid;
+                border-radius: 5%;
+                cursor: pointer;
+                margin: 0.3rem;
+                transition: 0.25s ease;
+              }
+
+              button:hover {
+                background-color: whitesmoke;
+                color: #779198;
+                border-color: #779198;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -158,130 +251,77 @@ main {
   section.second {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     width: 95%;
-    background-color: whitesmoke;
-    color: black;
+    background-color: #779198;
+    color: whitesmoke;
     border-radius: 1.5%;
+    height: auto;
 
     h2 {
-      font-size: 8rem;
+      font-size: 6rem;
     }
 
-    section.crads {
+    div.list-discription {
       display: flex;
-      flex-wrap: wrap;
-      height: 62vh;
-      width: 80vw;
+      width: 75vw;
+      justify-content: space-around;
+      border-bottom: 2px whitesmoke solid;
+      margin-bottom: 1rem;
 
-      div.card {
+      h3 {
+        font-size: 2rem;
+        width: 15vw;
+      }
+    }
+
+    div.my-list {
+      div.list-equipment {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        flex: 1 1 200px;
-        padding: 2rem;
+        width: 75vw;
+        justify-content: space-between;
+        background-color: whitesmoke;
+        color: black;
+        border-bottom: 2px solid black;
 
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        div.image-container {
-          overflow: hidden;
-          border-radius: 50%;
-
-          height: 30vh;
-
-          img {
-            border-radius: 50%;
-
-            height: 30vh;
-            transition: 0.25s ease;
+        div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          width: 15vw;
+          i {
+            font-size: 2rem;
             cursor: pointer;
           }
+        }
 
-          img:hover {
-            transform: scale(1.3);
+        div.quantity-button {
+          button {
+            width: 5vw;
+            font-size: 2rem;
+            padding: 0.2rem;
+            background-color: #779198;
+            color: whitesmoke;
+            margin: 1rem;
+            border-radius: 50%;
+            cursor: pointer;
+            border: #d9d9d9 solid 2px;
           }
         }
 
-        p {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
-  section.third {
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 95%;
-    border-radius: 1.5%;
-
-    h2 {
-      font-size: 8rem;
-      color: wheat;
-    }
-
-    section.thirdcard {
-      display: flex;
-      flex-wrap: wrap;
-      color: wheat;
-      margin-bottom: 10rem;
-
-      div.workcard {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        flex: 1 1 200px;
-        margin: 1rem;
-
-        h4 {
-          font-size: 2rem;
-          margin: 2rem 0rem;
-        }
-
-        a {
-          div.workimgbox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: 0.4s ease;
-
-            img {
-              height: 27vh;
-
-              position: relative;
-            }
-
-            h3.workword {
-              display: none;
-              text-decoration: none;
-              color: black;
-              position: absolute;
-            }
-          }
-        }
-
-        a:hover {
-          div.workimgbox {
-            background-color: wheat;
-            img {
-              opacity: 0.3;
-            }
-            h3.workword {
-              display: block;
-            }
+        div.list-product {
+          img {
+            height: 15vh;
+            padding-left: 1rem;
           }
         }
       }
+    }
+
+    div.total {
+      font-size: 3rem;
     }
   }
 }
@@ -339,49 +379,6 @@ footer {
       div {
         img {
           height: 35vh;
-        }
-      }
-    }
-
-    section.second {
-      h2 {
-        font-size: 6rem;
-      }
-
-      section.crads {
-        div.card {
-          padding: 1rem;
-          h3 {
-            font-size: 1.2rem;
-          }
-
-          div.image-container {
-            height: 20vh;
-
-            img {
-              height: 20vh;
-            }
-          }
-
-          p {
-            font-size: 0.9rem;
-          }
-        }
-      }
-    }
-
-    section.third {
-      h2 {
-        font-size: 6rem;
-      }
-
-      section.thirdcard {
-        height: 100vh;
-        div.workcard {
-          h4 {
-            font-size: 1.5rem;
-            margin: 1rem 0rem;
-          }
         }
       }
     }
@@ -459,55 +456,6 @@ footer {
       div {
         img {
           height: 25vh;
-        }
-      }
-    }
-
-    section.second {
-      h2 {
-        font-size: 4rem;
-      }
-
-      section.crads {
-        height: 100vh;
-
-        div.card {
-          padding: 0rem;
-          h3 {
-            font-size: 1rem;
-          }
-
-          div.image-container {
-            height: 15vh;
-
-            img {
-              height: 15vh;
-            }
-          }
-        }
-      }
-    }
-
-    section.third {
-      h2 {
-        font-size: 4rem;
-      }
-
-      section.thirdcard {
-        height: 80vh;
-        margin-bottom: 5rem;
-        div.workcard {
-          h4 {
-            font-size: 1rem;
-          }
-
-          a {
-            div.workimgbox {
-              img {
-                height: 18vh;
-              }
-            }
-          }
         }
       }
     }

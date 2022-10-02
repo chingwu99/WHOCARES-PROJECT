@@ -81,7 +81,6 @@ header nav.pc ul li.service-nav nav.service-nav-open ul li {
   color: black;
   border: 4px solid wheat;
   border-top: 1px;
-  border-top: 1px;
   opacity: 0.95;
   padding: 0.6rem 0.4rem;
   width: 10vw;
@@ -107,132 +106,172 @@ main {
   background-color: black;
 }
 main section.backImage {
-  min-height: 90vh;
+  min-height: 180vh;
   width: 95%;
-  background-color: #545454;
+  background-color: whitesmoke;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 1.5%;
   margin: 0.1rem;
 }
 main section.backImage h1 {
   font-size: 6rem;
-  color: white;
+  color: #779198;
+  transition: 0.25s ease;
+  margin-top: 1rem;
+}
+main section.backImage section.rential-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+  color: #779198;
+}
+main section.backImage section.rential-step i {
+  font-size: 2rem;
+}
+main section.backImage section.rential-step div {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section.backImage section.rential-step div.rential-step-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px;
+  border-style: solid;
+  border-color: #779198;
+  border-radius: 50%;
+}
+main section.backImage section.rential-step div.rential-step-picture i {
+  font-size: 2rem;
+  padding: 1.5rem;
+}
+main section.backImage section.commodity i {
+  pointer-events: none;
+}
+main section.backImage section.commodity div.commodity-floor {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0rem;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card {
+  border: 3px;
+  border-style: solid;
+  border-color: #779198;
+  border-radius: 2%;
+  height: 40vh;
+  margin: 0rem 1rem;
+  background-color: #d9d9d9;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img {
+  overflow: hidden;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img {
+  height: 25vh;
   transition: 0.25s ease;
 }
-main section.backImage h1:hover {
-  color: wheat;
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img:hover {
+  transform: scale(1.2);
 }
-main section.backImage div img {
-  height: 60vh;
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word {
+  display: flex;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div {
+  flex: 1 1;
+  margin: 0.5rem;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div h3 {
+  font-size: 1.1rem;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button.commodity-button {
+  font-size: 1.5rem;
+  background-color: #779198;
+  color: whitesmoke;
+  width: 7vw;
+  height: 5vh;
+  border: 2px whitesmoke solid;
+  border-radius: 5%;
+  cursor: pointer;
+  margin: 0.3rem;
+  transition: 0.25s ease;
+}
+main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button:hover {
+  background-color: whitesmoke;
+  color: #779198;
+  border-color: #779198;
 }
 main section.second {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   width: 95%;
-  background-color: whitesmoke;
-  color: black;
+  background-color: #779198;
+  color: whitesmoke;
   border-radius: 1.5%;
+  height: auto;
 }
 main section.second h2 {
-  font-size: 8rem;
+  font-size: 6rem;
 }
-main section.second section.crads {
+main section.second div.list-discription {
   display: flex;
-  flex-wrap: wrap;
-  height: 62vh;
-  width: 80vw;
-}
-main section.second section.crads div.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 75vw;
   justify-content: space-around;
-  flex: 1 1 200px;
-  padding: 2rem;
+  border-bottom: 2px whitesmoke solid;
+  margin-bottom: 1rem;
 }
-main section.second section.crads div.card h3 {
-  font-size: 1.5rem;
+main section.second div.list-discription h3 {
+  font-size: 2rem;
+  width: 15vw;
 }
-main section.second section.crads div.card div.image-container {
-  overflow: hidden;
-  border-radius: 50%;
-  height: 30vh;
+main section.second div.my-list div.list-equipment {
+  display: flex;
+  width: 75vw;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  color: black;
+  border-bottom: 2px solid black;
 }
-main section.second section.crads div.card div.image-container img {
-  border-radius: 50%;
-  height: 30vh;
-  transition: 0.25s ease;
+main section.second div.my-list div.list-equipment div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 15vw;
+}
+main section.second div.my-list div.list-equipment div i {
+  font-size: 2rem;
   cursor: pointer;
 }
-main section.second section.crads div.card div.image-container img:hover {
-  transform: scale(1.3);
-}
-main section.second section.crads div.card p {
-  font-size: 1rem;
-}
-main section.third {
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 95%;
-  border-radius: 1.5%;
-}
-main section.third h2 {
-  font-size: 8rem;
-  color: wheat;
-}
-main section.third section.thirdcard {
-  display: flex;
-  flex-wrap: wrap;
-  color: wheat;
-  margin-bottom: 10rem;
-}
-main section.third section.thirdcard div.workcard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  flex: 1 1 200px;
-  margin: 1rem;
-}
-main section.third section.thirdcard div.workcard h4 {
+main section.second div.my-list div.list-equipment div.quantity-button button {
+  width: 5vw;
   font-size: 2rem;
-  margin: 2rem 0rem;
+  padding: 0.2rem;
+  background-color: #779198;
+  color: whitesmoke;
+  margin: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: #d9d9d9 solid 2px;
 }
-main section.third section.thirdcard div.workcard a div.workimgbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s ease;
+main section.second div.my-list div.list-equipment div.list-product img {
+  height: 15vh;
+  padding-left: 1rem;
 }
-main section.third section.thirdcard div.workcard a div.workimgbox img {
-  height: 27vh;
-  position: relative;
-}
-main section.third section.thirdcard div.workcard a div.workimgbox h3.workword {
-  display: none;
-  text-decoration: none;
-  color: black;
-  position: absolute;
-}
-main section.third section.thirdcard div.workcard a:hover div.workimgbox {
-  background-color: wheat;
-}
-main section.third section.thirdcard div.workcard a:hover div.workimgbox img {
-  opacity: 0.3;
-}
-main section.third section.thirdcard div.workcard a:hover div.workimgbox h3.workword {
-  display: block;
+main section.second div.total {
+  font-size: 3rem;
 }
 
 footer {
@@ -278,34 +317,6 @@ footer h5 {
   }
   main section.backImage div img {
     height: 35vh;
-  }
-  main section.second h2 {
-    font-size: 6rem;
-  }
-  main section.second section.crads div.card {
-    padding: 1rem;
-  }
-  main section.second section.crads div.card h3 {
-    font-size: 1.2rem;
-  }
-  main section.second section.crads div.card div.image-container {
-    height: 20vh;
-  }
-  main section.second section.crads div.card div.image-container img {
-    height: 20vh;
-  }
-  main section.second section.crads div.card p {
-    font-size: 0.9rem;
-  }
-  main section.third h2 {
-    font-size: 6rem;
-  }
-  main section.third section.thirdcard {
-    height: 100vh;
-  }
-  main section.third section.thirdcard div.workcard h4 {
-    font-size: 1.5rem;
-    margin: 1rem 0rem;
   }
 }
 @media screen and (max-width: 850px) {
@@ -365,37 +376,6 @@ footer h5 {
   main section.backImage div img {
     height: 25vh;
   }
-  main section.second h2 {
-    font-size: 4rem;
-  }
-  main section.second section.crads {
-    height: 100vh;
-  }
-  main section.second section.crads div.card {
-    padding: 0rem;
-  }
-  main section.second section.crads div.card h3 {
-    font-size: 1rem;
-  }
-  main section.second section.crads div.card div.image-container {
-    height: 15vh;
-  }
-  main section.second section.crads div.card div.image-container img {
-    height: 15vh;
-  }
-  main section.third h2 {
-    font-size: 4rem;
-  }
-  main section.third section.thirdcard {
-    height: 80vh;
-    margin-bottom: 5rem;
-  }
-  main section.third section.thirdcard div.workcard h4 {
-    font-size: 1rem;
-  }
-  main section.third section.thirdcard div.workcard a div.workimgbox img {
-    height: 18vh;
-  }
   footer h5 {
     font-size: 0.8rem;
   }
@@ -434,4 +414,4 @@ footer h5 {
   to {
     transform: scaleY(1);
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=rentalstyle.css.map */

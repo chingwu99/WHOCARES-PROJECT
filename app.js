@@ -55,6 +55,17 @@ let addList = document
       let description = commodityWord.children[0].children[0].innerText;
       let price = commodityWord.children[0].children[1].children[0].innerText;
 
+      // add list success alert
+      let addListSuccess = document.querySelector(".add-list-success");
+      addListSuccess.classList.add("add-list-success-alert");
+
+      let listSuccessOkButton = document.querySelector(
+        ".list-success-ok-button"
+      );
+      listSuccessOkButton.addEventListener("click", (e) => {
+        addListSuccess.classList.remove("add-list-success-alert");
+      });
+
       let myList = document.createElement("div");
       myList.classList.add("my-list");
       myList.innerHTML = `
@@ -92,7 +103,7 @@ let addList = document
         console.log(totalPrice);
 
         let total = document.querySelector(".total");
-        total.innerHTML = `Total:${totalPrice}`;
+        total.innerHTML = `Total:$${totalPrice}`;
       };
 
       totalFunction();

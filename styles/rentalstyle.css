@@ -10,7 +10,10 @@ h1 h2 h3 h4 h5 h6 {
   font-weight: normal;
 }
 
-header {
+body {
+  position: relative;
+}
+body header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -22,49 +25,49 @@ header {
   z-index: 5;
   opacity: 0.95;
 }
-header h1 a {
+body header h1 a {
   font-size: 1.3rem;
   text-decoration: none;
   color: white;
   transition: 0.25s ease;
 }
-header h1 a:hover {
+body header h1 a:hover {
   color: wheat;
 }
-header div.logo {
+body header div.logo {
   display: flex;
   align-items: center;
   flex: 5 1 400px;
 }
-header div.logo img {
+body header div.logo img {
   height: 7vh;
 }
-header div.logo div.hambuger-div nav.hambuger {
+body header div.logo div.hambuger-div nav.hambuger {
   display: none;
 }
-header nav.pc {
+body header nav.pc {
   flex: 2 1 400px;
 }
-header nav.pc ul {
+body header nav.pc ul {
   display: flex;
   list-style-type: none;
   justify-content: space-around;
 }
-header nav.pc ul li a {
+body header nav.pc ul li a {
   text-decoration: none;
   color: white;
   transition: all 0.25s ease;
 }
-header nav.pc ul li a:hover {
+body header nav.pc ul li a:hover {
   color: wheat;
 }
-header nav.pc ul li.service-nav {
+body header nav.pc ul li.service-nav {
   position: relative;
 }
-header nav.pc ul li.service-nav nav.service-nav-open {
+body header nav.pc ul li.service-nav nav.service-nav-open {
   display: none;
 }
-header nav.pc ul li.service-nav nav.service-nav-open ul {
+body header nav.pc ul li.service-nav nav.service-nav-open ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,7 +76,7 @@ header nav.pc ul li.service-nav nav.service-nav-open ul {
   top: 2px;
   z-index: 10;
 }
-header nav.pc ul li.service-nav nav.service-nav-open ul li {
+body header nav.pc ul li.service-nav nav.service-nav-open ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,24 +91,23 @@ header nav.pc ul li.service-nav nav.service-nav-open ul li {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-header nav.pc ul li.service-nav nav.service-nav-open ul li:hover {
+body header nav.pc ul li.service-nav nav.service-nav-open ul li:hover {
   background-color: wheat;
 }
-header nav.pc ul li.service-nav nav.service-nav-mouseover {
+body header nav.pc ul li.service-nav nav.service-nav-mouseover {
   display: block;
 }
-header nav.hambuger-nav {
+body header nav.hambuger-nav {
   display: none;
 }
-
-main {
+body main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: black;
 }
-main section.backImage {
+body main section.backImage {
   min-height: 180vh;
   width: 95%;
   background-color: whitesmoke;
@@ -116,30 +118,30 @@ main section.backImage {
   border-radius: 1.5%;
   margin: 0.1rem;
 }
-main section.backImage h1 {
+body main section.backImage h1 {
   font-size: 6rem;
   color: #779198;
   transition: 0.25s ease;
   margin-top: 1rem;
 }
-main section.backImage section.rential-step {
+body main section.backImage section.rential-step {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 1rem 0rem;
   color: #779198;
 }
-main section.backImage section.rential-step i {
+body main section.backImage section.rential-step i {
   font-size: 2rem;
 }
-main section.backImage section.rential-step div {
+body main section.backImage section.rential-step div {
   margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main section.backImage section.rential-step div.rential-step-picture {
+body main section.backImage section.rential-step div.rential-step-picture {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,19 +150,19 @@ main section.backImage section.rential-step div.rential-step-picture {
   border-color: #779198;
   border-radius: 50%;
 }
-main section.backImage section.rential-step div.rential-step-picture i {
+body main section.backImage section.rential-step div.rential-step-picture i {
   font-size: 2rem;
   padding: 1.5rem;
 }
-main section.backImage section.commodity i {
+body main section.backImage section.commodity i {
   pointer-events: none;
 }
-main section.backImage section.commodity div.commodity-floor {
+body main section.backImage section.commodity div.commodity-floor {
   display: flex;
   flex-wrap: wrap;
   margin: 2rem 0rem;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card {
   border: 3px;
   border-style: solid;
   border-color: #779198;
@@ -169,32 +171,32 @@ main section.backImage section.commodity div.commodity-floor div.commodity-card 
   margin: 0rem 1rem;
   background-color: #d9d9d9;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img {
   overflow: hidden;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img {
   height: 25vh;
   transition: 0.25s ease;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img:hover {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img:hover {
   transform: scale(1.2);
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word {
   display: flex;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div {
   flex: 1 1;
   margin: 0.5rem;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div h3 {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div h3 {
   font-size: 1.1rem;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button.commodity-button {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button.commodity-button {
   font-size: 1.5rem;
   background-color: #779198;
   color: whitesmoke;
@@ -206,12 +208,12 @@ main section.backImage section.commodity div.commodity-floor div.commodity-card 
   margin: 0.3rem;
   transition: 0.25s ease;
 }
-main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button:hover {
+body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button:hover {
   background-color: whitesmoke;
   color: #779198;
   border-color: #779198;
 }
-main section.second {
+body main section.second {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,21 +224,21 @@ main section.second {
   border-radius: 1.5%;
   height: auto;
 }
-main section.second h2 {
+body main section.second h2 {
   font-size: 6rem;
 }
-main section.second div.list-discription {
+body main section.second div.list-discription {
   display: flex;
   width: 75vw;
   justify-content: space-around;
   border-bottom: 2px whitesmoke solid;
   margin-bottom: 1rem;
 }
-main section.second div.list-discription h3 {
+body main section.second div.list-discription h3 {
   font-size: 2rem;
   width: 15vw;
 }
-main section.second div.my-list div.list-equipment {
+body main section.second div.my-list div.list-equipment {
   display: flex;
   width: 75vw;
   justify-content: space-between;
@@ -244,18 +246,18 @@ main section.second div.my-list div.list-equipment {
   color: black;
   border-bottom: 2px solid black;
 }
-main section.second div.my-list div.list-equipment div {
+body main section.second div.my-list div.list-equipment div {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   width: 15vw;
 }
-main section.second div.my-list div.list-equipment div i {
+body main section.second div.my-list div.list-equipment div i {
   font-size: 2rem;
   cursor: pointer;
 }
-main section.second div.my-list div.list-equipment div.quantity-button button {
+body main section.second div.my-list div.list-equipment div.quantity-button button {
   width: 5vw;
   font-size: 2rem;
   padding: 0.2rem;
@@ -266,15 +268,74 @@ main section.second div.my-list div.list-equipment div.quantity-button button {
   cursor: pointer;
   border: #d9d9d9 solid 2px;
 }
-main section.second div.my-list div.list-equipment div.list-product img {
+body main section.second div.my-list div.list-equipment div.list-product img {
   height: 15vh;
   padding-left: 1rem;
 }
-main section.second div.total {
+body main section.second div.total {
   font-size: 3rem;
 }
-
-footer {
+body section.add-list-success {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 15;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+body section.add-list-success div {
+  background-color: rgb(245, 245, 245);
+  color: black;
+  width: 40vw;
+  height: 34vh;
+  border-radius: 4%;
+  border: #779198 solid 5px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body section.add-list-success div i {
+  font-size: 5rem;
+  color: green;
+}
+body section.add-list-success div h3 {
+  margin: 1rem;
+}
+body section.add-list-success div button.list-success-ok-button {
+  font-size: 1.5rem;
+  background-color: #779198;
+  color: whitesmoke;
+  width: 7vw;
+  height: 5vh;
+  border: 3px solid #d9d9d9;
+  border-radius: 5%;
+  cursor: pointer;
+  margin: 0.3rem;
+  transition: 0.25s ease;
+}
+body section.add-list-success div button:hover {
+  background-color: #d9d9d9;
+  color: black;
+  border-color: #779198;
+}
+body section.add-list-success-alert {
+  display: block;
+}
+body section.add-list-success-alert div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -17vh; /* Negative half of height. */
+  margin-left: -20vw; /* Negative half of width. */
+}
+body footer {
   background-color: rgb(99, 83, 83);
   color: white;
   display: flex;
@@ -282,104 +343,192 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-footer div.social {
+body footer div.social {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer div.social h6 {
+body footer div.social h6 {
   font-size: 1.5rem;
 }
-footer div.social div.socialicon {
+body footer div.social div.socialicon {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0rem 0.8rem;
 }
-footer div.social i {
+body footer div.social i {
   font-size: 3rem;
   color: white;
   cursor: pointer;
   transition: 0.25s ease;
 }
-footer div.social i:hover {
+body footer div.social i:hover {
   color: wheat;
 }
-footer h5 {
+body footer h5 {
   font-size: 1.3rem;
   margin: 0.1rem;
 }
 
 @media screen and (max-width: 1400px) {
-  main section.backImage h1 {
+  body main section.backImage h1 {
     font-size: 4rem;
-  }
-  main section.backImage div img {
-    height: 35vh;
   }
 }
 @media screen and (max-width: 850px) {
-  header div.logo {
+  body header div.logo {
     display: flex;
   }
-  header div.logo div.hambuger-div {
+  body header div.logo div.hambuger-div {
     display: flex;
     justify-content: end;
     width: 50vw;
   }
-  header div.logo div.hambuger-div nav.hambuger {
+  body header div.logo div.hambuger-div nav.hambuger {
     display: block;
     color: white;
     font-size: 2rem;
   }
-  header div.logo div.hambuger-div nav.hambuger i:hover {
+  body header div.logo div.hambuger-div nav.hambuger i:hover {
     color: wheat;
     cursor: pointer;
     transition: 0.25s ease;
   }
-  header nav.hambuger-nav {
+  body header nav.hambuger-nav {
     width: 100vw;
     height: 100vh;
   }
-  header nav.hambuger-nav ul {
+  body header nav.hambuger-nav ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
   }
-  header nav.hambuger-nav ul li {
+  body header nav.hambuger-nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 3rem 0rem;
   }
-  header nav.hambuger-nav ul li a {
+  body header nav.hambuger-nav ul li a {
     text-decoration: none;
     color: white;
     transition: all 0.25s ease;
     border-bottom: 2px solid white;
   }
-  header nav.hambuger-nav ul li a:hover {
+  body header nav.hambuger-nav ul li a:hover {
     color: wheat;
   }
-  header nav.hambuger-nav.click-hambuger {
+  body header nav.hambuger-nav.click-hambuger {
     display: block;
   }
-  header nav.pc {
+  body header nav.pc {
     display: none;
+  }
+  body main section.backImage {
+    min-height: 130vh;
+  }
+  body main section.backImage section.commodity div.commodity-floor {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1rem 0rem;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card {
+    height: 30vh;
+    margin: 0rem 0.2rem;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img {
+    height: 14vh;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word {
+    display: flex;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div h3 {
+    font-size: 1rem;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button.commodity-button {
+    font-size: 1.3rem;
+    width: 8vw;
+    height: 6vh;
+  }
+  body main section.second h2 {
+    font-size: 3rem;
+  }
+  body main section.second div.list-discription h3 {
+    font-size: 1.3rem;
+  }
+  body main section.second div.my-list div.list-equipment div.list-product img {
+    height: 7vh;
   }
 }
 @media screen and (max-width: 750px) {
-  main section.backImage h1 {
+  body main section.backImage {
+    min-height: 130vh;
+  }
+  body main section.backImage h1 {
     font-size: 2rem;
   }
-  main section.backImage div img {
+  body main section.backImage section.rential-step {
+    margin: 0rem;
+    scale: 0.5;
+  }
+  body main section.backImage section.commodity div.commodity-floor {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0rem;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card {
+    height: 40vh;
+    margin: 0.5rem 0rem;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img img {
     height: 25vh;
   }
-  footer h5 {
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word {
+    display: flex;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div h3 {
+    font-size: 1rem;
+  }
+  body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-word div.commodity-button-div button.commodity-button {
+    font-size: 1.2rem;
+    width: 13vw;
+    height: 9vh;
+  }
+  body main section.second h2 {
+    font-size: 2rem;
+  }
+  body main section.second div.list-discription h3 {
     font-size: 0.8rem;
   }
-  footer div.youtube h6 {
+  body main section.second div.my-list div.list-equipment {
+    font-size: 0.5rem;
+  }
+  body main section.second div.my-list div.list-equipment div.quantity-button button {
+    scale: 0.5;
+    margin: 0.3rem;
+  }
+  body main section.second div.my-list div.list-equipment div.list-product img {
+    height: 6vh;
+  }
+  body main section.second div.total {
+    font-size: 1.5rem;
+  }
+  body section.add-list-success div i {
+    font-size: 3rem;
+  }
+  body section.add-list-success div h3 {
+    font-size: 0.8rem;
+  }
+  body section.add-list-success div button.list-success-ok-button {
+    width: 13vw;
+    height: 6vh;
+  }
+  body footer h5 {
+    font-size: 0.8rem;
+  }
+  body footer div.youtube h6 {
     font-size: 0.8rem;
   }
 }

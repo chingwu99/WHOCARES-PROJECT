@@ -323,6 +323,65 @@ body {
 
       div.total {
         font-size: 3rem;
+        margin: 0.5rem;
+      }
+
+      button.clear-all-list-button {
+        margin-bottom: 0.5rem;
+        height: 5vh;
+        width: 10vw;
+        font-size: 1rem;
+        border: rgb(62, 61, 61) solid 1px;
+        border-radius: 10%;
+        cursor: pointer;
+      }
+    }
+
+    form.information {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 95%;
+      background-color: #779198;
+      color: whitesmoke;
+      border: whitesmoke 2px solid;
+      width: 60vw;
+      margin: 2rem;
+
+      h2 {
+        font-size: 3rem;
+        margin: 0.5rem;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        font-size: 1.5rem;
+
+        input,
+        select {
+          width: 25vw;
+          height: 5vh;
+          border-radius: 2%;
+        }
+
+        textarea {
+          width: 25vw;
+          border-radius: 2%;
+        }
+      }
+
+      button {
+        margin: 1rem;
+        width: 12vw;
+        height: 6vh;
+        background-color: wheat;
+        cursor: pointer;
+        font-size: 1.2rem;
+        border-radius: 2%;
       }
     }
   }
@@ -552,12 +611,12 @@ body {
 
       section.second {
         h2 {
-          font-size: 3rem;
+          font-size: 4rem;
         }
 
         div.list-discription {
           h3 {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
           }
         }
 
@@ -568,6 +627,33 @@ body {
                 height: 7vh;
               }
             }
+          }
+        }
+
+        button.clear-all-list-button {
+          width: 15vw;
+        }
+
+        form.information {
+          h2 {
+            font-size: 3rem;
+          }
+
+          input,
+          select {
+            width: 40vw;
+            height: 5vh;
+            border-radius: 2%;
+          }
+
+          textarea {
+            width: 40vw;
+            border-radius: 2%;
+          }
+
+          button {
+            width: 16vw;
+            font-size: 1.2rem;
           }
         }
       }
@@ -588,6 +674,17 @@ body {
         section.rential-step {
           margin: 0rem;
           scale: 0.5;
+          font-size: 1.5rem;
+
+          div {
+            margin: 0rem 1rem;
+          }
+
+          div.rential-step-picture {
+            i {
+              font-size: 3rem;
+            }
+          }
         }
 
         section.commodity {
@@ -634,13 +731,13 @@ body {
 
         div.list-discription {
           h3 {
-            font-size: 0.8rem;
+            font-size: 0.83rem;
           }
         }
 
         div.my-list {
           div.list-equipment {
-            font-size: 0.5rem;
+            font-size: 0.8rem;
 
             div.quantity-button {
               button {
@@ -651,7 +748,7 @@ body {
 
             div.list-product {
               img {
-                height: 6vh;
+                height: 5vh;
               }
             }
           }
@@ -659,6 +756,38 @@ body {
 
         div.total {
           font-size: 1.5rem;
+        }
+
+        button.clear-all-list-button {
+          width: 30vw;
+        }
+
+        form.information {
+          width: 80vw;
+          h2 {
+            font-size: 2rem;
+          }
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          input,
+          select {
+            width: 60vw;
+            height: 5vh;
+            border-radius: 2%;
+          }
+
+          textarea {
+            width: 60vw;
+            border-radius: 2%;
+          }
+
+          button {
+            width: 30vw;
+            font-size: 1rem;
+          }
         }
       }
     }

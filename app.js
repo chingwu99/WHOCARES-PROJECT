@@ -77,9 +77,9 @@ let addList = document
          ${description}
         </div>
         <div class="quantity-button">
-          <button>+</button>
-          1
-          <button>-</button>
+          <button class="reduce-quantity">-</button>
+          <p>1</P>
+          <button class="add-quantity">+</button>
         </div>
         <div>
          ＄<span class="price">${price}</span>/day
@@ -91,6 +91,21 @@ let addList = document
       `;
 
       divList.appendChild(myList);
+
+      //add quantity button
+      /*document.querySelectorAll(".add-quantity").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          console.log(e.target.parentElement);
+          console.log(e.target.parentElement.children[1]);
+          console.log(e.target.parentElement.children[1].innerText);
+          let quantity = e.target.parentElement.children[1];
+          quantity.classList.add("quantity");
+          let quantityText = e.target.parentElement.children[1].innerText;
+          let quantityTextNumber = Number(quantityText);
+          quantityTextNumber += 1;
+          quantity.innerText = quantityTextNumber;
+        });
+      });*/
 
       let totalFunction = () => {
         let totalPriceArray = [];
@@ -119,5 +134,15 @@ let addList = document
             totalFunction();
           });
         });
+
+      //clear-all-list
+      let clearAllListButton = document.querySelector(".clear-all-list-button");
+      clearAllListButton.addEventListener("click", (e) => {
+        document.querySelectorAll(".my-list").forEach((item) => {
+          item.remove();
+
+          totalFunction();
+        });
+      });
     });
   });

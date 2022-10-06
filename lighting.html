@@ -336,7 +336,41 @@
         </div>
         <div class="list"></div>
         <div class="total">Total:$0</div>
+        <button class="clear-all-list-button">Clear All List</button>
+
+        <form class="information">
+          <h2 class="animate__animated animate__pulse animate__infinite">
+            My Rental Information
+          </h2>
+          <div>
+            <h3>Name:</h3>
+            <input type="text" placeholder="請輸入姓名" required />
+            <h3>Phone Number:</h3>
+            <input type="text" placeholder="請輸入電話" required />
+            <h3>E-mail:</h3>
+            <input type="text" placeholder="請輸入e-mail" required />
+            <h3>Rental start date:</h3>
+            <input type="date" required />
+            <h3>Rental end date:</h3>
+            <input type="date" required />
+            <h3>Payment method:</h3>
+            <select required>
+              <option>請選擇付款方式</option>
+              <option>轉帳</option>
+              <option>現金</option>
+            </select>
+            <h3>Remark</h3>
+            <textarea
+              name="Remark"
+              cols="40"
+              rows="7"
+              placeholder="請輸入備註"
+            ></textarea>
+          </div>
+          <button>送出租借資料</button>
+        </form>
       </section>
+
       <!--add-list-success-->
 
       <section class="add-list-success">

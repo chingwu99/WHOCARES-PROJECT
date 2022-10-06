@@ -274,6 +274,58 @@ body main section.second div.my-list div.list-equipment div.list-product img {
 }
 body main section.second div.total {
   font-size: 3rem;
+  margin: 0.5rem;
+}
+body main section.second button.clear-all-list-button {
+  margin-bottom: 0.5rem;
+  height: 5vh;
+  width: 10vw;
+  font-size: 1rem;
+  border: rgb(62, 61, 61) solid 1px;
+  border-radius: 10%;
+  cursor: pointer;
+}
+body main form.information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  background-color: #779198;
+  color: whitesmoke;
+  border: whitesmoke 2px solid;
+  width: 60vw;
+  margin: 2rem;
+}
+body main form.information h2 {
+  font-size: 3rem;
+  margin: 0.5rem;
+}
+body main form.information div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  font-size: 1.5rem;
+}
+body main form.information div input,
+body main form.information div select {
+  width: 25vw;
+  height: 5vh;
+  border-radius: 2%;
+}
+body main form.information div textarea {
+  width: 25vw;
+  border-radius: 2%;
+}
+body main form.information button {
+  margin: 1rem;
+  width: 12vw;
+  height: 6vh;
+  background-color: wheat;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 2%;
 }
 body section.add-list-success {
   height: 100%;
@@ -453,13 +505,33 @@ body footer h5 {
     height: 6vh;
   }
   body main section.second h2 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   body main section.second div.list-discription h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
   body main section.second div.my-list div.list-equipment div.list-product img {
     height: 7vh;
+  }
+  body main section.second button.clear-all-list-button {
+    width: 15vw;
+  }
+  body main section.second form.information h2 {
+    font-size: 3rem;
+  }
+  body main section.second form.information input,
+body main section.second form.information select {
+    width: 40vw;
+    height: 5vh;
+    border-radius: 2%;
+  }
+  body main section.second form.information textarea {
+    width: 40vw;
+    border-radius: 2%;
+  }
+  body main section.second form.information button {
+    width: 16vw;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 750px) {
@@ -472,6 +544,13 @@ body footer h5 {
   body main section.backImage section.rential-step {
     margin: 0rem;
     scale: 0.5;
+    font-size: 1.5rem;
+  }
+  body main section.backImage section.rential-step div {
+    margin: 0rem 1rem;
+  }
+  body main section.backImage section.rential-step div.rential-step-picture i {
+    font-size: 3rem;
   }
   body main section.backImage section.commodity div.commodity-floor {
     display: flex;
@@ -500,20 +579,46 @@ body footer h5 {
     font-size: 2rem;
   }
   body main section.second div.list-discription h3 {
-    font-size: 0.8rem;
+    font-size: 0.83rem;
   }
   body main section.second div.my-list div.list-equipment {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
   body main section.second div.my-list div.list-equipment div.quantity-button button {
     scale: 0.5;
     margin: 0.3rem;
   }
   body main section.second div.my-list div.list-equipment div.list-product img {
-    height: 6vh;
+    height: 5vh;
   }
   body main section.second div.total {
     font-size: 1.5rem;
+  }
+  body main section.second button.clear-all-list-button {
+    width: 30vw;
+  }
+  body main section.second form.information {
+    width: 80vw;
+  }
+  body main section.second form.information h2 {
+    font-size: 2rem;
+  }
+  body main section.second form.information h3 {
+    font-size: 1.5rem;
+  }
+  body main section.second form.information input,
+body main section.second form.information select {
+    width: 60vw;
+    height: 5vh;
+    border-radius: 2%;
+  }
+  body main section.second form.information textarea {
+    width: 60vw;
+    border-radius: 2%;
+  }
+  body main section.second form.information button {
+    width: 30vw;
+    font-size: 1rem;
   }
   body section.add-list-success div i {
     font-size: 3rem;

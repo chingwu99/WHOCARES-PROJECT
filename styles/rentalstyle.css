@@ -257,20 +257,13 @@ body main section.second div.my-list div.list-equipment div i {
   font-size: 2rem;
   cursor: pointer;
 }
-body main section.second div.my-list div.list-equipment div.quantity-button button {
-  width: 5vw;
-  font-size: 2rem;
-  padding: 0.2rem;
-  background-color: #779198;
-  color: whitesmoke;
-  margin: 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  border: #d9d9d9 solid 2px;
-}
 body main section.second div.my-list div.list-equipment div.list-product img {
   height: 15vh;
   padding-left: 1rem;
+}
+body main section.second div.my-list div.list-equipment div input.cart-quantity-input {
+  width: 10vw;
+  text-align: center;
 }
 body main section.second div.total {
   font-size: 3rem;

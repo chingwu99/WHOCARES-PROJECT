@@ -65,7 +65,7 @@ let addList = document
       listSuccessOkButton.addEventListener("click", (e) => {
         addListSuccess.classList.remove("add-list-success-alert");
       });
-
+      //
       let myList = document.createElement("div");
       myList.classList.add("my-list");
       myList.innerHTML = `
@@ -76,10 +76,8 @@ let addList = document
         <div>
          ${description}
         </div>
-        <div class="quantity-button">
-          <button class="reduce-quantity">-</button>
-          <p>1</P>
-          <button class="add-quantity">+</button>
+        <div>
+          <input class="cart-quantity-input" type="number" min="1" value="1" oninput="value=value.replace('-', '')">
         </div>
         <div>
          ＄<span class="price">${price}</span>/day
@@ -92,37 +90,44 @@ let addList = document
 
       divList.appendChild(myList);
 
-      //add quantity button
-      /*document.querySelectorAll(".add-quantity").forEach((item) => {
-        item.addEventListener("click", (e) => {
-          console.log(e.target.parentElement);
-          console.log(e.target.parentElement.children[1]);
-          console.log(e.target.parentElement.children[1].innerText);
-          let quantity = e.target.parentElement.children[1];
-          quantity.classList.add("quantity");
-          let quantityText = e.target.parentElement.children[1].innerText;
-          let quantityTextNumber = Number(quantityText);
-          quantityTextNumber += 1;
-          quantity.innerText = quantityTextNumber;
-        });
-      });*/
-
+      //
       let totalFunction = () => {
+        let listEquipment = document.querySelectorAll(".list-equipment");
         let totalPriceArray = [];
-        document.querySelectorAll(".price").forEach((item) => {
-          totalPriceArray.push(Number(item.innerText));
-        });
-        console.log(totalPriceArray);
+        console.log(listEquipment.length);
+        if (listEquipment.length == 0) {
+          let total = document.querySelector(".total");
+          total.innerHTML = `Total:$0`;
+        } else {
+          document.querySelectorAll(".list-equipment").forEach((item) => {
+            let productQuantity = item.children[2].children[0].value;
+            let productPrice = item.children[3].children[0].innerText;
 
-        let totalPrice = totalPriceArray.reduce((a, b) => a + b, 0);
-        console.log(totalPrice);
+            console.log(productQuantity);
+            console.log(productPrice);
 
-        let total = document.querySelector(".total");
-        total.innerHTML = `Total:$${totalPrice}`;
+            totalPriceArray.push(Number(productPrice) * productQuantity);
+
+            console.log(totalPriceArray);
+            let totalPrice = totalPriceArray.reduce((a, b) => a + b, 0);
+            console.log(totalPrice);
+
+            let total = document.querySelector(".total");
+            total.innerHTML = `Total:$${totalPrice}`;
+          });
+        }
       };
 
       totalFunction();
 
+      //input change quantity
+      document.querySelectorAll(".cart-quantity-input").forEach((item) => {
+        item.addEventListener("change", (e) => {
+          totalFunction();
+        });
+      });
+
+      //remove list
       document
         .querySelectorAll(".remove-equipment")
         .forEach((removeEquipment) => {

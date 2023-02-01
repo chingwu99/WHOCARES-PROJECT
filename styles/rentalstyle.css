@@ -19,6 +19,7 @@ body header {
   align-items: center;
   padding: 0.7rem 0.7rem;
   background-color: rgb(99, 83, 83);
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.7);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -115,7 +116,7 @@ body main section.backImage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 1.5%;
+  border-radius: 20px;
   margin: 0.1rem;
 }
 body main section.backImage h1 {
@@ -166,10 +167,29 @@ body main section.backImage section.commodity div.commodity-floor div.commodity-
   border: 3px;
   border-style: solid;
   border-color: #779198;
-  border-radius: 2%;
+  border-radius: 10px;
   height: 40vh;
   margin: 0rem 1rem;
   background-color: #d9d9d9;
+  transform: translateY(-10px) rotate(0);
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.6);
+  transition: all 1s ease-in-out;
+}
+body main section.backImage section.commodity div.commodity-floor div.commodity-card:hover {
+  transform: rotate(5deg) scale(1.1);
+  transition: all 1s ease-in-out;
+  z-index: 10;
+  background-color: #779198;
+  border-color: wheat;
+}
+body main section.backImage section.commodity div.commodity-floor div.commodity-card:hover h3 {
+  color: whitesmoke;
+  transform: rotate(-5deg);
+  transition: all 1s ease-in-out;
+}
+body main section.backImage section.commodity div.commodity-floor div.commodity-card:hover button.commodity-button {
+  transform: rotate(-5deg);
+  transition: all 1s ease-in-out;
 }
 body main section.backImage section.commodity div.commodity-floor div.commodity-card div.commodity-img {
   overflow: hidden;
@@ -202,8 +222,8 @@ body main section.backImage section.commodity div.commodity-floor div.commodity-
   color: whitesmoke;
   width: 7vw;
   height: 5vh;
-  border: 2px whitesmoke solid;
-  border-radius: 5%;
+  border: 2px wheat solid;
+  border-radius: 5px;
   cursor: pointer;
   margin: 0.3rem;
   transition: 0.25s ease;
@@ -221,7 +241,7 @@ body main section.second {
   width: 95%;
   background-color: #779198;
   color: whitesmoke;
-  border-radius: 1.5%;
+  border-radius: 20px;
   height: auto;
 }
 body main section.second h2 {
@@ -264,6 +284,19 @@ body main section.second div.my-list div.list-equipment div.list-product img {
 body main section.second div.my-list div.list-equipment div input.cart-quantity-input {
   width: 10vw;
   text-align: center;
+}
+body main section.second div.my-list div.list-equipment .quantity-button {
+  border: none;
+  background-color: rgba(119, 145, 152, 0.5);
+  border-radius: 100px;
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin: 0rem 1.5rem;
+  cursor: pointer;
+}
+body main section.second div.my-list div.list-equipment .quantity-button:hover {
+  background-color: whitesmoke;
+  border: solid 1px #779198;
 }
 body main section.second div.total {
   font-size: 3rem;
@@ -527,7 +560,7 @@ body main section.second form.information select {
     font-size: 1.2rem;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   body main section.backImage {
     min-height: 130vh;
   }

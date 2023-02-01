@@ -31,123 +31,187 @@ serviceNav.addEventListener("mouseover", (e) => {
 
   document.querySelectorAll(".service-open-li").forEach((serviceOpenLi) => {
     serviceOpenLi.addEventListener("click", (e) => {
-      document.querySelector(".service-nav-open");
       removeServiceNavMouseover();
     });
   });
 
   serviceNav.addEventListener("click", (e) => {
-    document.querySelector(".service-nav-open");
     removeServiceNavMouseover();
   });
 });
 
 //lighting page
 //my equipment list
-let divList = document.querySelector(".list");
-let addList = document
-  .querySelectorAll(".commodity-button")
-  .forEach((commodityButton) => {
-    commodityButton.addEventListener("click", (e) => {
-      let commodityCard = e.target.parentElement.parentElement.parentElement;
-      let commodityWord = e.target.parentElement.parentElement;
-      let product = commodityCard.children[0].querySelector("img").src;
-      let description = commodityWord.children[0].children[0].innerText;
-      let price = commodityWord.children[0].children[1].children[0].innerText;
 
-      // add list success alert
-      let addListSuccess = document.querySelector(".add-list-success");
-      addListSuccess.classList.add("add-list-success-alert");
+//商品資料
+const data = [
+  {
+    img: "./pngpicture/lighting png/aputure amaran 100d.png",
+    name: "Aputure 100d",
+    quantity: 1,
+    price: 600,
+  },
+  {
+    img: "./pngpicture/lighting png/aputure 120d II.png",
+    name: "Aputure 120d II",
+    quantity: 1,
+    price: 800,
+  },
+  {
+    img: "./pngpicture/lighting png/aputure mc 4kit.png",
+    name: "Aputure mc 4kit",
+    quantity: 1,
+    price: 1800,
+  },
+  {
+    img: "./pngpicture/lighting png/aputure 300d II.png",
+    name: "Aputure 300d II",
+    quantity: 1,
+    price: 1000,
+  },
+  {
+    img: "./pngpicture/lighting png/aputure 300x.png",
+    name: "Aputure 300x",
+    quantity: 1,
+    price: 1300,
+  },
+  {
+    img: "./pngpicture/lighting png/aputure Lantern 90.png",
+    name: "Aputure Lantern90",
+    quantity: 1,
+    price: 500,
+  },
+  {
+    img: "./pngpicture/lighting png/FILMGEAR 1.2k.png",
+    name: "FILMGEAR 1.2k",
+    quantity: 1,
+    price: 1600,
+  },
+  {
+    img: "./pngpicture/lighting png/Delica 2.4.png",
+    name: "Delica 2.4",
+    quantity: 1,
+    price: 2500,
+  },
+  {
+    img: "./pngpicture/lighting png/FUSO CANTER 3.5.png",
+    name: "FUSO CANTER 3.5",
+    quantity: 1,
+    price: 3500,
+  },
+];
 
-      let listSuccessOkButton = document.querySelector(
-        ".list-success-ok-button"
-      );
-      listSuccessOkButton.addEventListener("click", (e) => {
-        addListSuccess.classList.remove("add-list-success-alert");
+let productList = [];
+
+//1.加入清單
+const add = document.querySelector(".commodity");
+add.addEventListener("click", (e) => {
+  if (e.target.getAttribute("class") == "commodity-button") {
+    let name = e.target.dataset.name;
+    let object = data.filter((i) => i.name == name)[0];
+
+    let sameProduct = productList.filter((i) => i.name === name)[0];
+
+    // console.log(sameProduct);
+
+    if (sameProduct !== undefined && sameProduct.name === name) {
+      productList.forEach((i) => {
+        if (i.name == name) {
+          i.quantity += 1;
+        }
       });
-      //
-      let myList = document.createElement("div");
-      myList.classList.add("my-list");
-      myList.innerHTML = `
-      <div class="list-equipment">
-        <div class="list-product">
-         <img src="${product}">
-        </div>
-        <div>
-         ${description}
-        </div>
-        <div>
-          <input class="cart-quantity-input" type="number" min="1" value="1" oninput="value=value.replace('-', '')">
-        </div>
-        <div>
-         ＄<span class="price">${price}</span>/day
-        </div>
-        <div>
-         <i class="fa-solid fa-xmark remove-equipment"></i>
+    } else {
+      productList.push(object);
+    }
+
+    // console.log(productList);
+    renderData();
+
+    //商品加入成功
+    let addSuccess = document.querySelector(".add-list-success");
+    addSuccess.classList.add("add-list-success-alert");
+
+    let successOkButton = document.querySelector(".list-success-ok-button");
+    successOkButton.addEventListener("click", (e) => {
+      addSuccess.classList.remove("add-list-success-alert");
+    });
+  }
+});
+
+//2.渲染
+
+let total = document.querySelector(".total");
+
+function renderData() {
+  let str = "";
+
+  productList.forEach((i) => {
+    str += `
+      <div class="my-list">
+        <div class="list-equipment">
+          <div class="list-product">
+          <img src='${i.img}'>
+          </div>
+          <div>
+          ${i.name}
+          </div>
+          <div>
+           <button type="button" class="quantity-button" data-qchange="reduce" data-id="${i.name}">-</button>
+            ${i.quantity}
+           <button type="button" class="quantity-button" data-qchange="add" data-id="${i.name}">+</button>
+          </div>
+          <div>
+          ＄<span class="price">${i.price}</span>/day
+          </div>
+          <div>
+          <i class="fa-solid fa-xmark remove-equipment" data-id="${i.name}"></i>
+          </div>
         </div>
       </div>
       `;
-
-      divList.appendChild(myList);
-
-      //
-      let totalFunction = () => {
-        let listEquipment = document.querySelectorAll(".list-equipment");
-        let totalPriceArray = [];
-        console.log(listEquipment.length);
-        if (listEquipment.length == 0) {
-          let total = document.querySelector(".total");
-          total.innerHTML = `Total:$0`;
-        } else {
-          document.querySelectorAll(".list-equipment").forEach((item) => {
-            let productQuantity = item.children[2].children[0].value;
-            let productPrice = item.children[3].children[0].innerText;
-
-            console.log(productQuantity);
-            console.log(productPrice);
-
-            totalPriceArray.push(Number(productPrice) * productQuantity);
-
-            console.log(totalPriceArray);
-            let totalPrice = totalPriceArray.reduce((a, b) => a + b, 0);
-            console.log(totalPrice);
-
-            let total = document.querySelector(".total");
-            total.innerHTML = `Total:$${totalPrice}`;
-          });
-        }
-      };
-
-      totalFunction();
-
-      //input change quantity
-      document.querySelectorAll(".cart-quantity-input").forEach((item) => {
-        item.addEventListener("change", (e) => {
-          totalFunction();
-        });
-      });
-
-      //remove list
-      document
-        .querySelectorAll(".remove-equipment")
-        .forEach((removeEquipment) => {
-          removeEquipment.addEventListener("click", (e) => {
-            let myList = e.target.parentElement.parentElement;
-
-            myList.remove();
-
-            totalFunction();
-          });
-        });
-
-      //clear-all-list
-      let clearAllListButton = document.querySelector(".clear-all-list-button");
-      clearAllListButton.addEventListener("click", (e) => {
-        document.querySelectorAll(".my-list").forEach((item) => {
-          item.remove();
-
-          totalFunction();
-        });
-      });
-    });
   });
+
+  list.innerHTML = str;
+
+  //計算總價
+
+  function totalPrice() {
+    let sum = 0;
+    productList.forEach((i) => {
+      sum += i.quantity * i.price;
+    });
+    total.innerHTML = `Total:$${sum}`;
+  }
+  totalPrice();
+
+  // console.log(productList);
+}
+
+//3.移除商品 改變數量
+const list = document.querySelector(".list");
+list.addEventListener("click", (e) => {
+  let id = e.target.dataset.id;
+  if (e.target.getAttribute("class") == "fa-solid fa-xmark remove-equipment") {
+    productList = productList.filter((i) => i.name !== id);
+  } else if (e.target.getAttribute("class") == "quantity-button") {
+    let quantityChange = e.target.dataset.qchange;
+    console.log(quantityChange, id);
+    productList.forEach((i) => {
+      if (i.name == id) {
+        if (quantityChange == "reduce" && i.quantity > 1) {
+          i.quantity--;
+        } else if (quantityChange == "add") {
+          i.quantity++;
+        }
+      }
+    });
+  }
+  renderData();
+});
+
+//4.刪除清單全部
+let clearAll = document.querySelector(".clear-all-list-button");
+clearAll.addEventListener("click", (e) => {
+  productList = [];
+  renderData();
+});

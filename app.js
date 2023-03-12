@@ -195,7 +195,7 @@ list.addEventListener("click", (e) => {
     productList = productList.filter((i) => i.name !== id);
   } else if (e.target.getAttribute("class") == "quantity-button") {
     let quantityChange = e.target.dataset.qchange;
-    console.log(quantityChange, id);
+    // console.log(quantityChange, id);
     productList.forEach((i) => {
       if (i.name == id) {
         if (quantityChange == "reduce" && i.quantity > 1) {

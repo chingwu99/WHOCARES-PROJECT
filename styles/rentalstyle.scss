@@ -42,7 +42,7 @@ body {
       flex: 5 1 400px;
 
       img {
-        height: 7vh;
+        width: 50px;
       }
 
       div.hambuger-div {
@@ -54,6 +54,7 @@ body {
 
     nav.pc {
       flex: 2 1 400px;
+
       ul {
         display: flex;
         list-style-type: none;
@@ -93,11 +94,12 @@ body {
                 color: black;
                 border: 4px solid wheat;
                 border-top: 1px;
+                border-top: 1px;
 
                 opacity: 0.95;
                 padding: 0.6rem 0.4rem;
-                width: 10vw;
-                height: 7vh;
+                width: 150px;
+                height: 60px;
                 cursor: pointer;
                 transition: all 0.25s ease;
               }
@@ -126,15 +128,14 @@ body {
     justify-content: center;
     align-items: center;
     background-color: black;
+    overflow: hidden;
 
     section.backImage {
-      min-height: 180vh;
       width: 95%;
       background-color: whitesmoke;
       background-size: cover;
       display: flex;
       flex-direction: column;
-
       align-items: center;
       border-radius: 20px;
       margin: 0.1rem;
@@ -194,7 +195,9 @@ body {
             border-style: solid;
             border-color: #779198;
             border-radius: 10px;
-            height: 40vh;
+            overflow: hidden;
+            // height: 350px;
+            width: 300px;
             margin: 0rem 1rem;
             background-color: #d9d9d9;
             transform: translateY(-10px) rotate(0);
@@ -220,8 +223,13 @@ body {
 
             div.commodity-img {
               overflow: hidden;
+              height: 200px;
+              width: 300px;
+
               img {
-                height: 25vh;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
                 transition: 0.25s ease;
               }
 
@@ -249,8 +257,8 @@ body {
                   font-size: 1.5rem;
                   background-color: #779198;
                   color: whitesmoke;
-                  width: 7vw;
-                  height: 5vh;
+                  width: 100px;
+                  height: 50px;
                   border: 2px wheat solid;
                   border-radius: 5px;
                   cursor: pointer;
@@ -287,21 +295,20 @@ body {
 
       div.list-discription {
         display: flex;
-        width: 75vw;
+        width: 700px;
         justify-content: space-around;
         border-bottom: 2px whitesmoke solid;
         margin-bottom: 1rem;
 
         h3 {
           font-size: 2rem;
-          width: 15vw;
         }
       }
 
       div.my-list {
         div.list-equipment {
           display: flex;
-          width: 75vw;
+          width: 700px;
           justify-content: space-between;
           background-color: whitesmoke;
           color: black;
@@ -312,7 +319,7 @@ body {
             justify-content: center;
             align-items: center;
             padding: 1rem;
-            width: 15vw;
+            width: 140px;
             i {
               font-size: 2rem;
               cursor: pointer;
@@ -321,15 +328,8 @@ body {
 
           div.list-product {
             img {
-              height: 15vh;
+              width: 140px;
               padding-left: 1rem;
-            }
-          }
-
-          div {
-            input.cart-quantity-input {
-              width: 10vw;
-              text-align: center;
             }
           }
 
@@ -356,8 +356,8 @@ body {
 
       button.clear-all-list-button {
         margin-bottom: 0.5rem;
-        height: 5vh;
-        width: 10vw;
+        height: 50px;
+        width: 150px;
         font-size: 1rem;
         border: rgb(62, 61, 61) solid 1px;
         border-radius: 10%;
@@ -374,7 +374,7 @@ body {
       background-color: #779198;
       color: whitesmoke;
       border: whitesmoke 2px solid;
-      width: 60vw;
+      width: 700px;
       margin: 2rem;
 
       h2 {
@@ -391,21 +391,22 @@ body {
 
         input,
         select {
-          width: 25vw;
-          height: 5vh;
+          width: 500px;
+          height: 50px;
           border-radius: 2%;
         }
 
         textarea {
-          width: 25vw;
+          width: 500px;
+
           border-radius: 2%;
         }
       }
 
       button {
         margin: 1rem;
-        width: 12vw;
-        height: 6vh;
+        height: 50px;
+        width: 150px;
         background-color: wheat;
         cursor: pointer;
         font-size: 1.2rem;
@@ -450,8 +451,8 @@ body {
         font-size: 1.5rem;
         background-color: #779198;
         color: whitesmoke;
-        width: 7vw;
-        height: 5vh;
+        height: 50px;
+        width: 150px;
         border: 3px solid #d9d9d9;
         border-radius: 5%;
         cursor: pointer;
@@ -524,19 +525,7 @@ body {
   }
 }
 
-@media screen and(max-width:1400px) {
-  body {
-    main {
-      section.backImage {
-        h1 {
-          font-size: 4rem;
-        }
-      }
-    }
-  }
-}
-
-@media screen and(max-width:850px) {
+@media screen and (max-width: 850px) {
   body {
     header {
       div.logo {
@@ -599,38 +588,24 @@ body {
 
     main {
       section.backImage {
-        min-height: 130vh;
+        h1 {
+          font-size: 4rem;
+        }
+
         section.commodity {
           div.commodity-floor {
-            display: flex;
-            flex-wrap: nowrap;
-            margin: 1rem 0rem;
             div.commodity-card {
-              height: 30vh;
               margin: 0rem 0.2rem;
 
+              width: 230px;
+
               div.commodity-img {
-                img {
-                  height: 14vh;
-                }
+                width: 230px;
               }
 
               div.commodity-word {
                 display: flex;
-
-                div {
-                  h3 {
-                    font-size: 1rem;
-                  }
-                }
-
-                div.commodity-button-div {
-                  button.commodity-button {
-                    font-size: 1.3rem;
-                    width: 8vw;
-                    height: 6vh;
-                  }
-                }
+                flex-direction: column;
               }
             }
           }
@@ -641,111 +616,44 @@ body {
         h2 {
           font-size: 4rem;
         }
-
-        div.list-discription {
-          h3 {
-            font-size: 1.5rem;
-          }
-        }
-
-        div.my-list {
-          div.list-equipment {
-            div.list-product {
-              img {
-                height: 7vh;
-              }
-            }
-          }
-        }
-
-        button.clear-all-list-button {
-          width: 15vw;
-        }
-
-        form.information {
-          h2 {
-            font-size: 3rem;
-          }
-
-          input,
-          select {
-            width: 40vw;
-            height: 5vh;
-            border-radius: 2%;
-          }
-
-          textarea {
-            width: 40vw;
-            border-radius: 2%;
-          }
-
-          button {
-            width: 16vw;
-            font-size: 1.2rem;
-          }
-        }
       }
     }
   }
 }
 
-@media screen and(max-width:767px) {
+@media screen and (max-width: 767px) {
   body {
     main {
       section.backImage {
-        min-height: 130vh;
-
         h1 {
           font-size: 2rem;
+          margin: 1rem;
         }
 
         section.rential-step {
-          margin: 0rem;
-          scale: 0.5;
-          font-size: 1.5rem;
-
-          div {
-            margin: 0rem 1rem;
-          }
-
-          div.rential-step-picture {
-            i {
-              font-size: 3rem;
-            }
-          }
+          display: none;
         }
 
         section.commodity {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           div.commodity-floor {
-            display: flex;
             flex-direction: column;
-            margin: 0.5rem 0rem;
+            justify-content: center;
+            align-items: center;
+            margin: 0rem;
             div.commodity-card {
-              height: 40vh;
-              margin: 0.5rem 0rem;
+              margin: 1rem 0rem;
+
+              width: 300px;
 
               div.commodity-img {
-                img {
-                  height: 25vh;
-                }
+                width: 300px;
               }
 
               div.commodity-word {
-                display: flex;
-
-                div {
-                  h3 {
-                    font-size: 1rem;
-                  }
-                }
-
-                div.commodity-button-div {
-                  button.commodity-button {
-                    font-size: 1.2rem;
-                    width: 13vw;
-                    height: 9vh;
-                  }
-                }
+                flex-direction: row;
               }
             }
           }
@@ -755,66 +663,55 @@ body {
       section.second {
         h2 {
           font-size: 2rem;
+          margin: 1rem;
         }
 
         div.list-discription {
+          width: 350px;
+
           h3 {
-            font-size: 0.83rem;
+            font-size: 1rem;
           }
         }
 
         div.my-list {
           div.list-equipment {
-            font-size: 0.8rem;
+            width: 350px;
 
-            div.quantity-button {
-              button {
-                scale: 0.5;
-                margin: 0.3rem;
-              }
+            div {
+              width: 70px;
             }
 
             div.list-product {
               img {
-                height: 5vh;
+                width: 70px;
               }
+            }
+
+            .quantity-button {
+              display: none;
             }
           }
         }
 
         div.total {
-          font-size: 1.5rem;
-        }
-
-        button.clear-all-list-button {
-          width: 30vw;
+          font-size: 3rem;
         }
 
         form.information {
-          width: 80vw;
-          h2 {
-            font-size: 2rem;
-          }
+          width: 350px;
 
-          h3 {
-            font-size: 1.5rem;
-          }
+          div {
+            input,
+            select {
+              width: 300px;
+            }
 
-          input,
-          select {
-            width: 60vw;
-            height: 5vh;
-            border-radius: 2%;
-          }
+            textarea {
+              width: 300px;
 
-          textarea {
-            width: 60vw;
-            border-radius: 2%;
-          }
-
-          button {
-            width: 30vw;
-            font-size: 1rem;
+              border-radius: 2%;
+            }
           }
         }
       }
@@ -831,8 +728,8 @@ body {
         }
 
         button.list-success-ok-button {
-          width: 13vw;
-          height: 6vh;
+          width: 80px;
+          height: 50px;
         }
       }
     }

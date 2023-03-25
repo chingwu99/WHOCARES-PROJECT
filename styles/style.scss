@@ -41,7 +41,7 @@ header {
     flex: 5 1 400px;
 
     img {
-      height: 7vh;
+      width: 50px;
     }
 
     div.hambuger-div {
@@ -97,8 +97,8 @@ header {
 
               opacity: 0.95;
               padding: 0.6rem 0.4rem;
-              width: 10vw;
-              height: 7vh;
+              width: 150px;
+              height: 60px;
               cursor: pointer;
               transition: all 0.25s ease;
             }
@@ -127,9 +127,10 @@ main {
   justify-content: center;
   align-items: center;
   background-color: black;
+  overflow: hidden;
 
   section.backImage {
-    min-height: 90vh;
+    min-height: 750px;
     width: 95%;
     background-color: #545454;
     background-size: cover;
@@ -152,7 +153,8 @@ main {
 
     div {
       img {
-        height: 60vh;
+        width: 400px;
+        border-radius: 50%;
       }
     }
   }
@@ -175,16 +177,16 @@ main {
     section.crads {
       display: flex;
       flex-wrap: wrap;
-      height: 62vh;
-      width: 80vw;
+      // background-color: aqua;
 
       div.card {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        flex: 1 1 200px;
-        padding: 2rem;
+        margin: 2rem;
+        // background-color: #545454;
+        height: 500px;
 
         h3 {
           font-size: 1.5rem;
@@ -193,13 +195,12 @@ main {
         div.image-container {
           overflow: hidden;
           border-radius: 50%;
-
-          height: 30vh;
+          height: 250px;
+          width: 250px;
 
           img {
             border-radius: 50%;
-
-            height: 30vh;
+            height: 250px;
             transition: 0.25s ease;
             cursor: pointer;
           }
@@ -258,8 +259,7 @@ main {
             transition: 0.4s ease;
 
             img {
-              height: 27vh;
-
+              width: 400px;
               position: relative;
             }
 
@@ -331,66 +331,7 @@ footer {
   }
 }
 
-@media screen and(max-width:1400px) {
-  main {
-    section.backImage {
-      h1 {
-        font-size: 4rem;
-      }
-
-      div {
-        img {
-          height: 35vh;
-        }
-      }
-    }
-
-    section.second {
-      h2 {
-        font-size: 6rem;
-      }
-
-      section.crads {
-        div.card {
-          padding: 1rem;
-          h3 {
-            font-size: 1.2rem;
-          }
-
-          div.image-container {
-            height: 20vh;
-
-            img {
-              height: 20vh;
-            }
-          }
-
-          p {
-            font-size: 0.9rem;
-          }
-        }
-      }
-    }
-
-    section.third {
-      h2 {
-        font-size: 6rem;
-      }
-
-      section.thirdcard {
-        height: 100vh;
-        div.workcard {
-          h4 {
-            font-size: 1.5rem;
-            margin: 1rem 0rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and(max-width:850px) {
+@media screen and (max-width: 850px) {
   header {
     div.logo {
       display: flex;
@@ -449,19 +390,58 @@ footer {
       display: none;
     }
   }
+
+  main {
+    section.backImage {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+
+    section.second {
+      h2 {
+        font-size: 6rem;
+        margin-top: 30px;
+      }
+
+      section.crads {
+        div.card {
+          margin: 1rem;
+
+          div.image-container {
+            height: 200px;
+            width: 200px;
+
+            img {
+              height: 200px;
+            }
+          }
+        }
+      }
+    }
+
+    section.third {
+      h2 {
+        font-size: 6rem;
+      }
+    }
+  }
 }
 
-@media screen and(max-width:767px) {
+@media screen and (max-width: 767px) {
   main {
     section.backImage {
       border-radius: 10px;
+      min-height: 500px;
+      background-color: black;
       h1 {
         font-size: 2rem;
       }
 
       div {
+        margin-top: 50px;
         img {
-          height: 25vh;
+          width: 300px;
         }
       }
     }
@@ -473,21 +453,11 @@ footer {
       }
 
       section.crads {
-        height: 100vh;
+        justify-content: center;
+        align-items: center;
 
         div.card {
-          padding: 0rem;
-          h3 {
-            font-size: 1rem;
-          }
-
-          div.image-container {
-            height: 15vh;
-
-            img {
-              height: 15vh;
-            }
-          }
+          height: 400px;
         }
       }
     }
@@ -498,17 +468,11 @@ footer {
       }
 
       section.thirdcard {
-        height: 80vh;
-        margin-bottom: 5rem;
         div.workcard {
-          h4 {
-            font-size: 1rem;
-          }
-
           a {
             div.workimgbox {
               img {
-                height: 18vh;
+                width: 300px;
               }
             }
           }
